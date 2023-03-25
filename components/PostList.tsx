@@ -32,7 +32,7 @@ export const PostList: React.FC<PostListProps> = ({ posts }) => {
                 {formatDate(post.date)}
               </time>
               <h2 className="font-bold text-xl">
-                <Link href={`/posts/${post.slug}`}>
+                <Link href={`/blog/${post.slug}`}>
                   <a>{post.title}</a>
                 </Link>
               </h2>
@@ -48,7 +48,7 @@ export const PostList: React.FC<PostListProps> = ({ posts }) => {
                   {post.tags.map((tag, index) => {
                     return (
                       <li key={index}>
-                        <Tag href={`/posts/tagged/${slugify(tag)}`}>{tag}</Tag>
+                        <Tag href={`/blog/tagged/${slugify(tag)}`}>{tag}</Tag>
                       </li>
                     );
                   })}

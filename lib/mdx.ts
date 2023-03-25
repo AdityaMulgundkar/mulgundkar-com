@@ -5,7 +5,7 @@ import type { MDXFrontMatter } from "@/lib/types";
 
 const root = process.cwd();
 
-export const postsPath = path.join(root, "posts");
+export const postsPath = path.join(root, "blog");
 
 export const getMdx = (fileName: string) => {
   const fullPath = path.join(postsPath, fileName);

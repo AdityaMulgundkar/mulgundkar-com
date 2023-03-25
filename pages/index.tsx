@@ -30,7 +30,7 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
       >
         <PostList posts={posts} />
         <div className="mt-8">
-          <Link href="/posts">
+          <Link href="/blog">
             <a className="group inline-flex items-center gap-2 text-pink-600">
               View more posts{" "}
               <ArrowRight
