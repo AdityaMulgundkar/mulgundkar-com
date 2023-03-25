@@ -21,7 +21,7 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
               Robotics Systems Engineer, Product Developer
             </p>
             <p>
-              Helping engineers build adaptive, robust and fault-tolerant products.
+              Helping engineers build robust, adaptive and fault-tolerant products.
               I love building things - especially hardware products that have some level of middleware interaction.
               Writing about Robotics, Product Dev, Flutter, and other things that I find interesting.
             </p>
