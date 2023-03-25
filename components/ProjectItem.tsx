@@ -14,7 +14,7 @@ export const ProjectItem: React.FC<ProjectItemProps> = ({
   image,
 }) => {
   return (
-    <div className="relative flex w-full max-w-[26rem] flex-col rounded-xl bg-clip-border shadow-lg">
+    <div className="rounded-xl bg-clip-border shadow-lg">
       <div className="relative mx-4 mt-4 overflow-hidden rounded-xl bg-clip-border shadow-lg shadow-blue-gray-500/40">
         <img
           src={image}
