@@ -96,7 +96,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
     mdxOptions: {
       remarkPlugins: [],
       rehypePlugins: [rehypePrism],
-      development: false,
     },
     scope: frontMatter,
   });
