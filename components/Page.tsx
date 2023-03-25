@@ -4,6 +4,7 @@ import { formatDate } from "@/lib/formatDate";
 import siteConfig from "@/data/siteConfig";
 import { Prose } from "@/components/Prose";
 import { cx } from "@/lib/utils";
+import Script from "next/script";
 
 interface PageProps {
   date?: string;
