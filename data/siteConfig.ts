@@ -7,7 +7,7 @@ const siteConfig: SiteConfig = {
     "Personal website and blog.",
   siteThumbnail: "/og-image.png",
   nav: [
-    { label: "Posts", href: "/posts" },
+    { label: "Blog", href: "/blog" },
     { label: "Projects", href: "/projects"},
     { label: "Publications", href: "/publications"},
     { label: "CV", href: "/CV.pdf"},
