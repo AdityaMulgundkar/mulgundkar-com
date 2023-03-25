@@ -17,7 +17,7 @@ interface HomeProps {
 const Home: NextPage<HomeProps> = ({ posts }) => {
   return (
     <>
-      <Page title="Publications">
+      <Page title="Publications" description="Academic works that I have published so far.">
         <ul
           className={cx(
             "divide-y -my-8",

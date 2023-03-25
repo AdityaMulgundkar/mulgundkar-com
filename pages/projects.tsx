@@ -8,7 +8,7 @@ import Script from "next/script";
 const About: NextPage = () => {
   return (
     <>
-      <Page title="Projects">
+      <Page title="Projects" description="Some of the recent work I've done.">
         <Script
           type="module"
           src="https://unpkg.com/@material-tailwind/html@latest/scripts/tooltip.js"

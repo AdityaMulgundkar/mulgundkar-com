@@ -11,6 +11,7 @@ const siteConfig: SiteConfig = {
     { label: "Projects", href: "/projects"},
     { label: "Publications", href: "/publications"},
     { label: "CV", href: "/CV.pdf"},
+    { label: "Stack", href: "/stack"},
     { label: "Bookmarks", href: "https://xplus1.notion.site/9bda5f73cfc6495d85d16b22af460c4a?v=29f5e160e3354a8f9859595cd9a87e3c"},
   ],
   social: {
