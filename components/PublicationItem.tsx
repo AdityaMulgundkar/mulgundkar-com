@@ -11,7 +11,7 @@ import { ArrowRight } from "react-feather";
 interface PublicationItemProps {
   date?: string;
   title?: string;
-  doi?: string;
+  doi?: "" | string;
   authors?: string;
   id?: 0 | number;
   tags?: string[];
@@ -31,11 +31,9 @@ export const PublicationItem: React.FC<PublicationItemProps> = ({
         {date}
       </time>
       <h2 className="font-bold text-xl">
-        <Link href={doi}>
-          <a className="group inline-flex items-center gap-2 text-pink-600">
+          <a className="group inline-flex items-center gap-2 text-pink-600" href={doi}>
             {title}
           </a>
-        </Link>
       </h2>
       {authors ? (
         <div className="mt-3">
