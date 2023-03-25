@@ -14,15 +14,16 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
   return (
     <>
       <Page
-        title="Next.js MDX Blog Theme"
+        title="Aditya Mulgundkar"
         description={
           <>
             <p>
-              View the source code on{" "}
-              <a href="https://github.com/alexcarpenter/nextjs-mdx-blog-theme">
-                Github
-              </a>
-              .
+              Robotics Systems Engineer, Product Developer
+            </p>
+            <p>
+              Helping engineers build adaptive, robust and fault-tolerant products.
+              I love building things - especially hardware products that have some level of middleware interaction.
+              Writing about Robotics, Product Dev, Flutter, and other things that I find interesting.
             </p>
           </>
         }

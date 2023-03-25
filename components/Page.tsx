@@ -38,6 +38,10 @@ export const Page: React.FC<PageProps> = ({
           property="og:image"
           content={`${siteConfig.siteUrl}${metaThumbnail}`}
         />
+        <script
+          type="module"
+          src="https://unpkg.com/@material-tailwind/html@latest/scripts/tooltip.js"
+        ></script>
       </Head>
       <header
         className={cx(
