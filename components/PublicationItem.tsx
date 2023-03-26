@@ -31,7 +31,7 @@ export const PublicationItem: React.FC<PublicationItemProps> = ({
         {date}
       </time>
       <h2 className="font-bold text-xl">
-          <a className="group inline-flex items-center gap-2 text-pink-600" href={doi} target="_blank" rel="noreferrer">
+          <a className="group inline-flex items-center gap-2" href={doi} target="_blank" rel="noreferrer">
             {title}
           </a>
       </h2>
