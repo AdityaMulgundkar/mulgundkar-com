@@ -17,13 +17,15 @@ const About: NextPage = () => {
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 mb-24">
           <ProjectItem
             title="Embedded system based Fault Tolerant Control and Autonomous Navigation of a UAV"
-            image="hexa-frame-web.jpg"
+            image="/hexa-frame-web.jpg"
             tags={["PX4", "UAV", "Python", "ROS", "Gazebo"]}
             shadow={false}
+            fit="contain"
           />
           <ProjectItem
             title="Project"
-            image="https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80"
+            image="/photo-test.jpg"
+            fit="cover"
           />
         </div>
 
@@ -38,13 +40,17 @@ const About: NextPage = () => {
         </header>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <ProjectItem
-            title="Fault Tolerant Control of a Hexacopter with a faulty motor"
-            image="https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80"
+            title="Valorant++ Companion App"
+            image="/valorant.jpg"
+            tags={["Flutter"]}
+            fit="cover"
+            pos="top"
           />
           <ProjectItem
             title="Project"
-            image="https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80"
-          />
+
+            image="/photo-test.jpg"
+             />
         </div>
       </Page>
     </>

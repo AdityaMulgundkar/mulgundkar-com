@@ -5,6 +5,7 @@ import { Prose } from "./Prose";
 import { v4 } from "uuid";
 import { Button } from "@material-tailwind/react";
 import { Tooltip } from "./Tooltip";
+import Image from "next/image";
 
 interface ProjectItemProps {
   emoji?: string;
@@ -15,6 +16,8 @@ interface ProjectItemProps {
   | string;
   shadow?: true | boolean;
   id?: 0 | number;
+  fit?: "cover" | "contain" | "fill" | "none" | "scale-down";
+  pos?: "center" | "top" | "bottom";
 }
 const myid = v4();
 
@@ -25,19 +28,24 @@ function RandomNumber() {
 
 export const ProjectItem: React.FC<ProjectItemProps> = ({
   emoji,
-  children,
   title,
   tags,
-  image,
+  image = "/photo-test.jpg",
   shadow = true,
   id = RandomNumber(),
+  fit = "cover",
+  pos = "center",
 }) => (
   <div className="rounded-xl bg-clip-border shadow-lg">
     <div className="relative mx-4 mt-4 overflow-hidden rounded-xl bg-clip-border shadow-lg shadow-blue-gray-500/40">
       <img
         src={image}
         alt={title}
-        className="object-cover w-full h-48 rounded-t-xl"
+        className={cx(
+          `object-${fit}`,
+          `object-${pos}`,
+          "w-full h-48 rounded-t-xl",
+        )}
       />
       <div
         className={cx(
@@ -46,11 +54,6 @@ export const ProjectItem: React.FC<ProjectItemProps> = ({
             : ""
         )}
       />
-      <button
-        className="!absolute top-4 right-4 h-8 max-h-[32px] w-8 max-w-[32px] select-none rounded-full text-center align-middle font-sans text-xs font-medium uppercase text-red-500 transition-all hover:bg-red-500/10 active:bg-red-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-        type="button"
-        data-ripple-dark="true"
-      ></button>
     </div>
     <div className="p-6">
       <div className="mb-3 flex items-center justify-between">
@@ -62,9 +65,9 @@ export const ProjectItem: React.FC<ProjectItemProps> = ({
       {tags?.map((tag, index) => {
         return (
           <Tooltip
-          key={index}
-          tag={tag}
-        />
+            key={index}
+            tag={tag}
+          />
         );
       })}
 
