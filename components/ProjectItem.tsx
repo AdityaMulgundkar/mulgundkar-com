@@ -18,6 +18,7 @@ interface ProjectItemProps {
   id?: 0 | number;
   fit?: "cover" | "contain" | "fill" | "none" | "scale-down";
   pos?: "center" | "top" | "bottom";
+  description?: string;
 }
 const myid = v4();
 
@@ -35,17 +36,22 @@ export const ProjectItem: React.FC<ProjectItemProps> = ({
   id = RandomNumber(),
   fit = "cover",
   pos = "center",
+  description = "",
 }) => (
-  <div className="rounded-xl bg-clip-border shadow-lg">
+  <div className="rounded-xl bg-clip-border shadow-lg bg-gray-100 dark:bg-gray-800/50">
     <div className="relative mx-4 mt-4 overflow-hidden rounded-xl bg-clip-border shadow-lg shadow-blue-gray-500/40">
       <img
         src={image}
         alt={title}
         className={cx(
-          `object-${fit}`,
-          `object-${pos}`,
           "w-full h-48 rounded-t-xl",
         )}
+        style={{
+          maxWidth: "100%",
+          maxHeight: "600px",
+          objectFit: `${fit}`,
+          objectPosition: `${pos}`,
+        }}
       />
       <div
         className={cx(
@@ -57,10 +63,16 @@ export const ProjectItem: React.FC<ProjectItemProps> = ({
     </div>
     <div className="p-6">
       <div className="mb-3 flex items-center justify-between">
-        <h5 className="block font-sans text-xl font-medium leading-snug tracking-normal antialiased">
+        <h5 className="block font-sans text-xl font-medium leading-snug tracking-normal antialiased" style={
+          {
+          }
+        }>
           {title}
         </h5>
       </div>
+      <p className="mb-4 block font-sans text-base font-light leading-relaxed text-gray-700 antialiased">
+        {description}
+      </p>
 
       {tags?.map((tag, index) => {
         return (
@@ -71,7 +83,7 @@ export const ProjectItem: React.FC<ProjectItemProps> = ({
         );
       })}
 
-      <button
+      {/* <button
         className={cx(
           "block w-full select-none rounded-lg py-3.5 px-7 text-center align-middle font-sans text-sm font-bold uppercase shadow-md transition-all",
           "bg-gray-900 text-gray-50",
@@ -81,7 +93,7 @@ export const ProjectItem: React.FC<ProjectItemProps> = ({
         data-ripple-light="true"
       >
         Read More
-      </button>
+      </button> */}
     </div>
   </div>
 );
