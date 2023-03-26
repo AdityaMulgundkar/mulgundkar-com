@@ -18,6 +18,7 @@ const About: NextPage = () => {
           <ProjectItem
             title="Embedded system based Fault Tolerant Control and Autonomous Navigation of a UAV"
             image="hexa-frame-web.jpg"
+            tags={["PX4", "UAV", "Python", "ROS", "Gazebo"]}
             shadow={false}
           />
           <ProjectItem
