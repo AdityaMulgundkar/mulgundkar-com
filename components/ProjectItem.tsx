@@ -63,14 +63,11 @@ export const ProjectItem: React.FC<ProjectItemProps> = ({
     </div>
     <div className="p-6">
       <div className="mb-3 flex items-center justify-between">
-        <h5 className="block font-sans text-xl font-medium leading-snug tracking-normal antialiased" style={
-          {
-          }
-        }>
+        <h5 className="block font-sans text-xl font-medium leading-snug tracking-normal antialiased">
           {title}
         </h5>
       </div>
-      <p className="mb-4 block font-sans text-base font-light leading-relaxed text-gray-700 antialiased">
+      <p className="mb-4 block font-sans text-base font-light leading-relaxed antialiased">
         {description}
       </p>
 
