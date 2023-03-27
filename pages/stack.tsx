@@ -28,38 +28,51 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
           <div className="bg-white dark:bg-black shadow sm:rounded-lg">
             <div className="border-t border-gray-200 dark:border-gray-700">
               <dl>
-                <StackOdd tag="Category">
+                <StackOdd tag="Coding">
                   <LogoTooltip
-                    tag="Python"
+                    tag="VS Code"
                   />
                   <LogoTooltip
-                    tag="Python"
+                    tag="Github Copilot"
                   />
                   <LogoTooltip
-                    tag="Python"
-                  />
-                  <LogoTooltip
-                    tag="Python"
-                  />
-                  <LogoTooltip
-                    tag="Python"
+                    tag="Linear"
                   />
                 </StackOdd>
-                <StackEven tag="Category">
+                <StackEven tag="OSX">
                   <LogoTooltip
-                    tag="Python"
+                    tag="Raycast"
                   />
                   <LogoTooltip
-                    tag="Python"
+                    tag="GitKraken"
                   />
                   <LogoTooltip
-                    tag="Python"
+                    tag="Barrier"
                   />
                   <LogoTooltip
-                    tag="Python"
+                    tag="iTerm2"
+                  />
+                </StackEven>
+                <StackOdd tag="Extensions">
+                  <LogoTooltip
+                    tag="Bitwarden"
                   />
                   <LogoTooltip
-                    tag="Python"
+                    tag="Grammarly"
+                  />
+                </StackOdd>
+                <StackEven tag="Web Tools">
+                  <LogoTooltip
+                    tag="Notion"
+                  />
+                  <LogoTooltip
+                    tag="AirTable"
+                  />
+                  <LogoTooltip
+                    tag="Miro"
+                  />
+                  <LogoTooltip
+                    tag="Figma"
                   />
                 </StackEven>
               </dl>

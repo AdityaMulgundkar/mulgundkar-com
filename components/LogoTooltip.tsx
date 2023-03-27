@@ -9,9 +9,13 @@ export const LogoTooltip: React.FC<LogoTooltipProps> = ({
 }) => (
   <div className="relative flex flex-col items-center group">
     <img
-      className="col-span-2 max-h-12 w-full object-contain lg:col-span-1 fill-cyan-500 hover:fill-cyan-700"
-      src={getSVG(String(tag))}
-      alt="Transistor"
+      className="col-span-2 max-h-4 w-full object-contain lg:col-span-1 fill-cyan-500 hover:fill-cyan-700"
+      src={
+        "https://img.icons8.com/" +
+        isColor(tag!).toLowerCase() +
+        getCleanTag(tag!).replace(/ /g, "")?.toLowerCase()
+      }
+      alt={tag}
       width="158"
       height="48"
     />
@@ -24,11 +28,28 @@ export const LogoTooltip: React.FC<LogoTooltipProps> = ({
   </div>
 );
 
-function getSVG(tag: "" | String) {
+function getCleanTag(tag: "" | String) {
   switch (tag) {
-    case "Python":
+    case "VS Code":
+      return "visual-studio-code-2019";
+    case "Github Copilot":
+      return "github";
+    case "GitKraken":
+      return "git";
+    case "iTerm2":
+      return "console";
     default:
-      return "https://tailwindui.com/img/logos/158x48/transistor-logo-gray-900.svg";
+      return tag;
+  }
+  throw new Error("Function not implemented.");
+}
+
+function isColor(tag: "" | String) {
+  switch (tag) {
+    case "AirTable":
+      return "/";
+    default:
+      return "color/";
   }
   throw new Error("Function not implemented.");
 }
