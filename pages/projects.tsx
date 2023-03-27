@@ -56,6 +56,14 @@ const About: NextPage = () => {
             fit="contain"
           />
           <ProjectItem
+            title="Network Function Virtualization orchestration for on-premise vCPE (B.Tech Project)"
+            description="Implemented NFV to benchmark WAN on Customer Premise Equipment.
+            Successfully implemented RFC 3031, RFC 3035, RFC 3036."
+            image="https://upload.wikimedia.org/wikipedia/en/1/1d/Indian_Institute_of_Technology_Bombay_Logo.svg"
+            tags={["Flutter"]}
+            fit="contain"
+          />
+          <ProjectItem
             title="Flutter plug-in providing (a few) basic bindings to OpenCV-4.x. OpenCV methods implemented without the Core packages."
             image="https://raw.githubusercontent.com/AdityaMulgundkar/flutter_opencv/master/flutter_opencv.png"
             tags={["Flutter","OpenCV"]}
@@ -64,7 +72,7 @@ const About: NextPage = () => {
           <ProjectItem
             title="A Flutter plugin for changing the Home Screen, Lock Screen (or both) Wallpaper on Android devices.            "
             image="https://i.imgur.com/pWgGxs5.png"
-            tags={["Flutter"]}
+            tags={["Flutter", "Android"]}
             fit="cover"
           />
         </div>

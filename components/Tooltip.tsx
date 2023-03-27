@@ -1,9 +1,3 @@
-import { cx } from "@/lib/utils";
-import Script from "next/script";
-import { Prose } from "./Prose";
-// @ts-ignore
-import { v4 } from "uuid";
-
 interface TooltipProps {
   tag?: string;
 }
@@ -13,7 +7,7 @@ export const Tooltip: React.FC<TooltipProps> = ({
 }) => (
   <div className="group mt-0 mb-0 mr-2 inline-flex flex-wrap items-center gap-3">
     <div className="relative flex flex-col items-center group">
-      <span className="w-12 h-12 cursor-pointer rounded-full border border-pink-500/5 bg-pink-500/5 p-3 text-pink-500 transition-colors hover:border-pink-500/10 hover:bg-pink-500/10 hover:!opacity-100 group-hover:opacity-70"
+      <span className="w-12 h-12 rounded-full border border-pink-500/5 bg-pink-500/5 p-3 text-pink-500 transition-colors hover:border-pink-500/10 hover:bg-pink-500/10 hover:!opacity-100 group-hover:opacity-70"
       >
         {getSVG(String(tag))}
       </span>
