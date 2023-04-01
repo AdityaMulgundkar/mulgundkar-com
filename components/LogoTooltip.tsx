@@ -48,6 +48,8 @@ function isColor(tag: "" | String) {
   switch (tag) {
     case "AirTable":
       return "/";
+    case "Blinkist":
+      return "fluency/";
     default:
       return "color/";
   }

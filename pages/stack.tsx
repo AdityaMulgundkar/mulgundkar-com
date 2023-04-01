@@ -75,6 +75,25 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
                     tag="Figma"
                   />
                 </StackEven>
+                <StackOdd tag="Productivity">
+                  <LogoTooltip
+                    tag="Blinkist"
+                  />
+                  <LogoTooltip
+                    tag="Substack"
+                  />
+                  <LogoTooltip
+                    tag="Grammarly"
+                  />
+                  </StackOdd>
+                <StackEven tag="Academic">
+                  <LogoTooltip
+                    tag="Overleaf"
+                  />
+                  <LogoTooltip
+                    tag="TurnItIn"
+                  />
+                </StackEven>
               </dl>
             </div>
           </div>
