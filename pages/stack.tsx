@@ -44,7 +44,7 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
                 <StackEven tag="OSX">
                   <LogoTooltipURL
                     tag="Raycast"
-                    src="https://asset.brandfetch.io/idxxHV50Mm/id71SKI8GR.svg"
+                    src="https://asset.brandfetch.io/idxxHV50Mm/idw44lawVc.svg"
                   />
                   <LogoTooltip
                     tag="GitKraken"
