@@ -40,10 +40,9 @@ tags: ['px4', 'controller']
 
 ## Writing the custom controller logic
 - Take sensor inputs from uORB subscription.
+- Compute control inputs based on joystick input (for manual mode) or desired setpoints.
 - Compute errors.
-- Compute control inputs based on controller parameters.
-    - Control inputs are the desired angular rates or torque (roll, pitch, yaw) and thrust.
-- Compute desired torque and thrust values using your control logic.
+- Compute desired torque and thrust values using your control logic and error reference.
 - Output values are control setpoints to uORB publication(s).
 
 ## Publishing Torque and Thrust setpoints
