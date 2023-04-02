@@ -42,4 +42,53 @@ tags: ['px4', 'controller']
 - Take sensor inputs from uORB subscription.
 - Compute errors.
 - Compute control inputs based on controller parameters.
-- Output control inputs to uORB publication.
+    - Control inputs are the desired angular rates or torque (roll, pitch, yaw) and thrust.
+- Compute desired torque and thrust values using your control logic.
+- Output values are control setpoints to uORB publication(s).
+
+## Publishing Torque and Thrust setpoints
+- The control setpoints are published to the uORB topics `vehicle_torque_setpoint` and `vehicle_thrust_setpoint`.
+- Defining the publishers and setpoint objects:
+```C
+// Publishers
+uORB::Publication<vehicle_torque_sp_s>	_torque_sp_pub;
+uORB::Publication<vehicle_thrust_sp_s>	_thrust_sp_pub;
+
+// Setpoint objects
+vehicle_torque_sp_s torque_sp{};
+vehicle_thrust_sp_s thrust_sp{};
+```
+
+- Setting the Thrust setpoint values and publishing:
+```C
+// Thrust rates need to be computed first, shown as some_value_1, some_value_2, some_value_3 here.
+thrust_sp.xyz[0] = some_value_1;
+thrust_sp.xyz[1] = some_value_2;
+thrust_sp.xyz[2] = some_value_3;
+
+thrust_sp.timestamp = hrt_absolute_time();
+_thrust_sp_pub.publish(thrust_sp);
+```
+
+- Setting the Torque setpoint values and publishing:
+```C
+// Thrust rates need to be computed first, shown as some_value_4, some_value_5, some_value_6 here.
+torque_sp.xyz[0] = some_value_4;
+torque_sp.xyz[1] = some_value_5;
+torque_sp.xyz[2] = some_value_6;
+
+torque_sp.timestamp = hrt_absolute_time();
+_torque_sp_pub.publish(torque_sp);
+```
+
+## Compiling and testing the custom controller
+- Compile and test the firmware in SITL:
+    - Navigate to `PX4-Autopilot` directory and run `make px4_sitl gazebo`, for testing in Gazebo SITL.
+- Compile and test the firmware on real hardware:
+    - Navigate to `PX4-Autopilot` directory and run `make px4_fmu-v5_default`, for testing on a real hardware.
+    - You can append `upload` to the above command, in order to build and flash immediately.
+    - Else, you can generate the firmware binary using `make px4_fmu-v5_default build` and flash it manually from a ground control software.
+    - Note that the fmu version (fmu-v5) mentioned here is board specific, and you need to change it [according to your board](https://docs.px4.io/main/en/flight_controller/pixhawk_series.html#supported-boards).
+
+## Sample code
+- TODO: Add sample Github repository with custom controller code
