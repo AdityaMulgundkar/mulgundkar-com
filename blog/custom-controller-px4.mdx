@@ -1,16 +1,45 @@
 ---
 title: "Writing a custom controller on PX4 Autopilot framework for a multicopter"
-description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, ex!"
+description: "A definitive guide on writing and testing a custom controller on PX4 Autopilot framework, for a multicopter."
 date: "2023-01-18"
-tags: ['css']
+tags: ['px4', 'controller']
 ---
 
-<Note emoji="👋">Hey there, I am a custom React component being rendered in [MDX](https://mdxjs.com/).</Note>
+- Custom controller design is needed in research and development.
+- PX4 Autopilot framework is often preferred in this use case, becaue of its permissive license and modular design.
+- This article will walk you through the process of writing a custom controller on PX4 Autopilot framework for a multicopter.
 
-Lorem ipsum dolor sit amet [consectetur adipisicing](/) elit. Porro nobis consectetur debitis? In animi nobis soluta at esse et nihil, non aut dolorem, deserunt odio quasi sunt veritatis, nisi quam?
+## Pre-requisites
+- PX4 Development Environment (SITL) [setup](https://docs.px4.io/main/en/dev_setup/dev_env.html).
+    - Clone the PX4-Autopilot repository.
+        - Clone the official [PX4-Autopilot](https://github.com/PX4/PX4-Autopilot) repository.
+        <br/>OR<br/> Fork the PX4-Autopilot repository and clone your forked version instead.
+        - (Optional) Work on a new branch on your cloned repository.
+- Gazebo simulator [setup](https://docs.px4.io/main/en/sim_gazebo_gz/).
 
-> Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro nobis consectetur debitis? In animi nobis soluta at esse et nihil.
+## Disabling the default controller(s)
+- The default (PID) controller(s) need to be disabled first, since we are writing a custom controller.
+- PX4 Autopilot uses 3 control loops, namely, attitude, rate and position.
+- In the `rc.mc_apps` file, comment out the following lines:
+    - `mc_att_control start`
+    - `mc_pos_control start`
+    - `mc_rate_control start`
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro nobis consectetur debitis? In animi nobis soluta at esse et nihil, non aut dolorem, deserunt odio quasi sunt veritatis, nisi quam?
+## Create your custom module
+- A [custom module](https://dev.px4.io/v1.10_noredirect/en/apps/module_template.html) is required, since PX4 has support for writing your own applications at the firmware level.
+- This new module runs as a task on its own stack.
+- Navigate to `PX4-Autopilot/src/modules` and create a new folder for your custom controller, e.g., my_controller.
+- Add source files in the `my_controller` directory.
+    - Copy the [module template](https://github.com/PX4/PX4-Autopilot/tree/main/src/templates/template_module) files into the `my_controller` directory.
+- Add CMake entry for the new module.
+    - In `PX4-Autopilot/src/modules/CMakeLists.txt`, add add_subdirectory(my_controller).
+- Add startup entry for the new module.
+    - In `PX4-Autopilot/ROMFS/px4fmu_common/init.d/`, add your module (e.g., my_controller start).
+    - Every module that is used for a certain frame type needs to be given a start command in the corresponding init.d file.
+    - In our case, we are focusing on a multicopter, hence we modify the `rc.mc_apps` file.
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro nobis consectetur debitis? In animi nobis soluta at esse et nihil, non aut dolorem, deserunt odio quasi sunt veritatis, nisi quam?
+## Writing the custom controller logic
+- Take sensor inputs from uORB subscription.
+- Compute errors.
+- Compute control inputs based on controller parameters.
+- Output control inputs to uORB publication.
