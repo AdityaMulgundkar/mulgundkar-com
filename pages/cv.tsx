@@ -116,7 +116,7 @@ const CV: NextPage<CVProps> = ({ posts }) => {
                         htmlFor="push-everything"
                         className="block text-sm font-medium leading-6"
                       >
-                        I'm a Recruiter
+                        I&apos;m a Recruiter
                       </label>
                     </div>
                     <div className="flex items-center gap-x-3">
@@ -131,7 +131,7 @@ const CV: NextPage<CVProps> = ({ posts }) => {
                         htmlFor="push-email"
                         className="block text-sm font-medium leading-6"
                       >
-                        I'm a Researcher
+                        I&apos;m a Researcher
                       </label>
                     </div>
                     <div className="flex items-center gap-x-3">
@@ -146,7 +146,7 @@ const CV: NextPage<CVProps> = ({ posts }) => {
                         htmlFor="push-nothing"
                         className="block text-sm font-medium leading-6"
                       >
-                        I'm a Student
+                        I&apos;m a Student
                       </label>
                     </div>
                   </div>
