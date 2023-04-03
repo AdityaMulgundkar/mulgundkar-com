@@ -33,7 +33,7 @@ const CV: NextPage<CVProps> = ({ posts }) => {
                 <div className="sm:col-span-3">
                   <label
                     htmlFor="first"
-                    className="block text-sm font-medium leading-6 text-gray-900"
+                    className="block text-sm font-medium leading-6"
                   >
                     First name
                   </label>
@@ -46,7 +46,7 @@ const CV: NextPage<CVProps> = ({ posts }) => {
                       required={true}
                       minLength={2}
                       maxLength={20}
-                      className="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                      className="block w-full rounded-md border-0 p-1.5 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     />
                   </div>
                 </div>
@@ -54,7 +54,7 @@ const CV: NextPage<CVProps> = ({ posts }) => {
                 <div className="sm:col-span-3">
                   <label
                     htmlFor="last"
-                    className="block text-sm font-medium leading-6 text-gray-900"
+                    className="block text-sm font-medium leading-6"
                   >
                     Last name
                   </label>
@@ -67,7 +67,7 @@ const CV: NextPage<CVProps> = ({ posts }) => {
                       required={true}
                       minLength={2}
                       maxLength={20}
-                      className="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                      className="block w-full rounded-md border-0 p-1.5 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     />
                   </div>
                 </div>
@@ -75,7 +75,7 @@ const CV: NextPage<CVProps> = ({ posts }) => {
                 <div className="sm:col-span-3">
                   <label
                     htmlFor="email"
-                    className="block text-sm font-medium leading-6 text-gray-900"
+                    className="block text-sm font-medium leading-6"
                   >
                     Email address
                   </label>
@@ -89,17 +89,17 @@ const CV: NextPage<CVProps> = ({ posts }) => {
                       minLength={2}
                       maxLength={50}
                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
-                      className="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                      className="block w-full rounded-md border-0 p-1.5 shadow-sm ring-1 ring-inset ring-gray-300  focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     />
                   </div>
                 </div>
               </div>
               <div className="mt-10 space-y-10">
                 <fieldset>
-                  <legend className="text-sm font-semibold leading-6 text-gray-900">
+                  <legend className="text-sm font-semibold leading-6">
                     Your Role
                   </legend>
-                  <p className="mt-1 text-sm leading-6 text-gray-600">
+                  <p className="mt-1 text-sm leading-6">
                     Why would you be interested in vieiwing my CV?
                   </p>
                   <div className="mt-6 space-y-6">
@@ -110,13 +110,13 @@ const CV: NextPage<CVProps> = ({ posts }) => {
                         type="radio"
                         value={"recruiter"}
                         defaultChecked={true}
-                        className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                        className="h-4 w-4 border-gray-300 focus:ring-indigo-600"
                       />
                       <label
                         htmlFor="push-everything"
-                        className="block text-sm font-medium leading-6 text-gray-900"
+                        className="block text-sm font-medium leading-6"
                       >
-                        Recruiter
+                        I'm a Recruiter
                       </label>
                     </div>
                     <div className="flex items-center gap-x-3">
@@ -125,13 +125,13 @@ const CV: NextPage<CVProps> = ({ posts }) => {
                         name="role"
                         type="radio"
                         value={"researcher"}
-                        className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                        className="h-4 w-4 border-gray-300 focus:ring-indigo-600"
                       />
                       <label
                         htmlFor="push-email"
-                        className="block text-sm font-medium leading-6 text-gray-900"
+                        className="block text-sm font-medium leading-6"
                       >
-                        Researcher
+                        I'm a Researcher
                       </label>
                     </div>
                     <div className="flex items-center gap-x-3">
@@ -140,20 +140,20 @@ const CV: NextPage<CVProps> = ({ posts }) => {
                         name="role"
                         type="radio"
                         value={"student"}
-                        className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                        className="h-4 w-4 border-gray-300 focus:ring-indigo-600"
                       />
                       <label
                         htmlFor="push-nothing"
-                        className="block text-sm font-medium leading-6 text-gray-900"
+                        className="block text-sm font-medium leading-6"
                       >
-                        Student
+                        I'm a Student
                       </label>
                     </div>
                   </div>
                 </fieldset>
                 <button
                   type="submit"
-                  className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  className="rounded-md bg-pink-600 px-3 py-2 text-sm text-gray-100 font-semibold shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >
                   Download
                 </button>
