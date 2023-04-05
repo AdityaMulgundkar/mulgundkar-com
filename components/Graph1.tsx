@@ -1,6 +1,6 @@
 import { cx } from "@/lib/utils";
 import { Prose } from "./Prose";
-import { Mermaid } from "mdx-mermaid/Mermaid";
+import { Mermaid } from "mdx-mermaid/lib/Mermaid";
 
 interface Graph1Props {
   emoji?: string;
