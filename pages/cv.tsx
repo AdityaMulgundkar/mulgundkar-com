@@ -153,7 +153,7 @@ const CV: NextPage<CVProps> = ({ posts }) => {
                 </fieldset>
                 <button
                   type="submit"
-                  className="rounded-md bg-pink-600 px-3 py-2 text-sm text-gray-100 font-semibold shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  className="rounded-md bg-pink-600 hover:bg-pink-500 px-3 py-2 text-sm text-gray-100 font-semibold shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >
                   Download
                 </button>
