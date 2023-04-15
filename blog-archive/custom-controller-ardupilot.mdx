@@ -1,0 +1,91 @@
+---
+title: "Writing a custom controller on the ArduPilot framework for a multicopter"
+description: "A definitive guide on writing and testing a custom controller on the ArduPilot framework, for a multicopter."
+date: "2023-02-21"
+tags: ['Ardupilot', 'controller']
+---
+
+- This article will walk you through the process of writing a custom controller on the ArduPilot framework for a multicopter (ArduCopter).
+
+## Pre-requisites
+- PX4 Development Environment (SITL) [setup](https://docs.px4.io/main/en/dev_setup/dev_env.html).
+    - Clone the PX4-Autopilot repository.
+        - Clone the official [PX4-Autopilot](https://github.com/PX4/PX4-Autopilot) repository.
+        <br/>OR<br/> Fork the PX4-Autopilot repository and clone your forked version instead.
+        - (Optional) Work on a new branch on your cloned repository.
+- Gazebo simulator [setup](https://docs.px4.io/main/en/sim_gazebo_gz/).
+
+## Disabling the default controller(s)
+- The default (PID) controller(s) need to be disabled first, since we are writing a custom controller.
+- PX4 Autopilot uses 3 control loops, namely, attitude, rate and position.
+- In the `rc.mc_apps` file, comment out the following lines:
+    - `mc_att_control start`
+    - `mc_pos_control start`
+    - `mc_rate_control start`
+
+## Create your custom module
+- A [custom module](https://dev.px4.io/v1.10_noredirect/en/apps/module_template.html) is required, since PX4 has support for writing your own applications at the firmware level.
+- This new module runs as a task on its own stack.
+- Navigate to `PX4-Autopilot/src/modules` and create a new folder for your custom controller, e.g., my_controller.
+- Add source files in the `my_controller` directory.
+    - Copy the [module template](https://github.com/PX4/PX4-Autopilot/tree/main/src/templates/template_module) files into the `my_controller` directory.
+- Add CMake entry for the new module.
+    - In `PX4-Autopilot/src/modules/CMakeLists.txt`, add add_subdirectory(my_controller).
+- Add startup entry for the new module.
+    - In `PX4-Autopilot/ROMFS/px4fmu_common/init.d/`, add your module (e.g., my_controller start).
+    - Every module that is used for a certain frame type needs to be given a start command in the corresponding init.d file.
+    - In our case, we are focusing on a multicopter, hence we modify the `rc.mc_apps` file.
+
+## Writing the custom controller logic
+- Take sensor inputs from uORB subscription.
+- Compute control inputs based on joystick input (for manual mode) or desired setpoints.
+- Compute errors.
+- Compute desired torque and thrust values using your control logic and error reference.
+- Output values are control setpoints to uORB publication(s).
+
+## Publishing Torque and Thrust setpoints
+- The control setpoints are published to the uORB topics `vehicle_torque_setpoint` and `vehicle_thrust_setpoint`.
+- Defining the publishers and setpoint objects:
+```C
+// Publishers
+uORB::Publication<vehicle_torque_sp_s>	_torque_sp_pub;
+uORB::Publication<vehicle_thrust_sp_s>	_thrust_sp_pub;
+
+// Setpoint objects
+vehicle_torque_sp_s torque_sp{};
+vehicle_thrust_sp_s thrust_sp{};
+```
+
+- Setting the Thrust setpoint values and publishing:
+```C
+// Thrust rates need to be computed first, shown as some_value_1, some_value_2, some_value_3 here.
+thrust_sp.xyz[0] = some_value_1;
+thrust_sp.xyz[1] = some_value_2;
+thrust_sp.xyz[2] = some_value_3;
+
+thrust_sp.timestamp = hrt_absolute_time();
+_thrust_sp_pub.publish(thrust_sp);
+```
+
+- Setting the Torque setpoint values and publishing:
+```C
+// Thrust rates need to be computed first, shown as some_value_4, some_value_5, some_value_6 here.
+torque_sp.xyz[0] = some_value_4;
+torque_sp.xyz[1] = some_value_5;
+torque_sp.xyz[2] = some_value_6;
+
+torque_sp.timestamp = hrt_absolute_time();
+_torque_sp_pub.publish(torque_sp);
+```
+
+## Compiling and testing the custom controller
+- Compile and test the firmware in SITL:
+    - Navigate to `PX4-Autopilot` directory and run `make px4_sitl gazebo`, for testing in Gazebo SITL.
+- Compile and test the firmware on real hardware:
+    - Navigate to `PX4-Autopilot` directory and run `make px4_fmu-v5_default`, for testing on a real hardware.
+    - You can append `upload` to the above command, in order to build and flash immediately.
+    - Else, you can generate the firmware binary using `make px4_fmu-v5_default build` and flash it manually from a ground control software.
+    - Note that the fmu version (fmu-v5) mentioned here is board specific, and you need to change it [according to your board](https://docs.px4.io/main/en/flight_controller/pixhawk_series.html#supported-boards).
+
+## Sample code
+- TODO: Add sample Github repository with custom controller code
