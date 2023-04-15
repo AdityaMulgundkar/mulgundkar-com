@@ -39,6 +39,7 @@ export const Page: React.FC<PageProps> = ({
           property="og:image"
           content={`${siteConfig.siteUrl}${metaThumbnail}`}
         />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" />
       </Head>
       <header
         className={cx(

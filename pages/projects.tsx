@@ -1,8 +1,6 @@
 import type { NextPage } from "next";
 import { Page } from "@/components/Page";
-import { Prose } from "@/components/Prose";
 import { ProjectItem } from "@/components/ProjectItem";
-import { cx } from "@/lib/utils";
 import Script from "next/script";
 
 const About: NextPage = () => {
@@ -66,7 +64,7 @@ const About: NextPage = () => {
           <ProjectItem
             title="Flutter plug-in providing (a few) basic bindings to OpenCV-4.x. OpenCV methods implemented without the Core packages."
             image="https://raw.githubusercontent.com/AdityaMulgundkar/flutter_opencv/master/flutter_opencv.png"
-            tags={["Flutter","OpenCV"]}
+            tags={["Flutter", "OpenCV"]}
             fit="contain"
           />
           <ProjectItem
