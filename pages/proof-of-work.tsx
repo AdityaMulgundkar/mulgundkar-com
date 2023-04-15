@@ -59,9 +59,9 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
           category="Space Tech, Hobby Project, Robotics Test-bed"
         >
           <p className="mb-4 block font-sans text-base font-light leading-relaxed antialiased">
-            Engineered a payload for ISRO's Polar Satellite Launch Vehicle
+            Engineered a payload for ISRO&apos;s Polar Satellite Launch Vehicle
             (PSLV), expanding capabilities in satellite deployment. Conducted
-            test-bed studies on Terfenol-D material's intrinsic shape
+            test-bed studies on Terfenol-D material&apos;s intrinsic shape
             transformation effect in outer space, advancing understanding of
             material properties under extreme conditions.
           </p>
@@ -76,7 +76,7 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
           <p className="mb-4 block font-sans text-base font-light leading-relaxed antialiased">
             Experienced in developing mobile applications using Flutter, React
             Native, and native Android. Work done under NDA, or on contract
-            isn't listed here.
+            isn&apos;t listed here.
           </p>
           <ul>
             <li>
@@ -112,7 +112,7 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
           <p className="mb-4 block font-sans text-base font-light leading-relaxed antialiased">
             Experienced in developing websites using React, Next.js, Django,
             MySQL, MongoDB, PostgreSQL, GraphQL and PHP. Back-end dashboards,
-            admin panels and internal websites aren't listed here.
+            admin panels and internal websites aren&apos;t listed here.
           </p>
           <ul>
             <li>
