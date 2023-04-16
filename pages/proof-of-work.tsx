@@ -76,7 +76,7 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
           </p>
           <ul>
             <li>
-              <a href="https://github.com/AdityaMulgundkar/DroneForce">
+              <a href="https://github.com/AdityaMulgundkar/DroneForce" target="_blank" rel="noreferrer">
                 DroneForce
               </a>{" "}
               <br />
@@ -87,10 +87,10 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
               </Link>
             </li>
             <li>
-              <a href="https://pub.dev/opencv">Flutter OpenCV</a>
+              <a href="https://pub.dev/opencv" target="_blank" rel="noreferrer">Flutter OpenCV</a>
             </li>
             <li>
-              <a href="https://pub.dev/wallpaper_manager">Wallpaper Manager</a>
+              <a href="https://pub.dev/wallpaper_manager" target="_blank" rel="noreferrer">Wallpaper Manager</a>
             </li>
           </ul>
         </Proof>
@@ -103,24 +103,24 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
           </p>
           <ul>
             <li>
-              <a href="https://play.google.com/store/apps/details?id=in.wedeasy.app">
+              <a href="https://play.google.com/store/apps/details?id=in.wedeasy.app" target="_blank" rel="noreferrer">
                 WedEasy
               </a>
             </li>
             <li>
-              <a href="https://play.google.com/store/apps/details?id=com.chaos_apps.valorant_plus_plus">
+              <a href="https://play.google.com/store/apps/details?id=com.chaos_apps.valorant_plus_plus" target="_blank" rel="noreferrer">
                 Valorant++
               </a>{" "}
               (Personal Project)
             </li>
             <li>
-              <a href="https://play.google.com/store/apps/details?id=in.scangrid.app">
+              <a href="https://play.google.com/store/apps/details?id=in.scangrid.app" target="_blank" rel="noreferrer">
                 ScanGrid
               </a>{" "}
               by VieTrove Solutions
             </li>
             <li>
-              <a href="https://play.google.com/store/apps/details?id=co.soaron.untouched_flutter">
+              <a href="https://play.google.com/store/apps/details?id=co.soaron.untouched_flutter" target="_blank" rel="noreferrer">
                 Untouched
               </a>{" "}
               by SoarOn
@@ -139,19 +139,19 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
           </p>
           <ul>
             <li>
-              <a href="https://wedeasy.in">WedEasy</a>
+              <a href="https://wedeasy.in" target="_blank" rel="noreferrer">WedEasy</a>
             </li>
             <li>
-              <a href="https://www.guildcap.com/">Guild Capital</a>
+              <a href="https://www.guildcap.com/" target="_blank" rel="noreferrer">Guild Capital</a>
             </li>
             <li>
-              <a href="https://www.atidiv.com/">Atidiv</a>
+              <a href="https://www.atidiv.com/" target="_blank" rel="noreferrer">Atidiv</a>
             </li>
             <li>
-              <a href="https://www.argylesp.com/">ArgyleSP</a>
+              <a href="https://www.argylesp.com/" target="_blank" rel="noreferrer">ArgyleSP</a>
             </li>
             <li>
-              <a href="https://www.blackwatch.io/">BlackWatch Advisors</a>
+              <a href="https://www.blackwatch.io/" target="_blank" rel="noreferrer">BlackWatch Advisors</a>
             </li>
           </ul>
         </Proof>
