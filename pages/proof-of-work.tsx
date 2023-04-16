@@ -81,7 +81,7 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
               </a>{" "}
               <br />
               Ardupilot based framework to write your custom controller and
-              control a drone with ROS. You can read the usage tutorial on
+              control a drone with ROS. You can read the usage tutorial on&nbsp;
               <Link href={`/blog/droneforce-usage`}>
                 my blog.
               </Link>
