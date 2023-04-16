@@ -5,6 +5,7 @@ import { Page } from "@/components/Page";
 import YoutubeEmbed from "@/components/YoutubeEmbed";
 import { cx } from "@/lib/utils";
 import { Proof } from "@/components/Proof";
+import Link from "next/link";
 
 interface HomeProps {
   posts: Array<MDXFrontMatter>;
@@ -57,6 +58,7 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
         <Proof
           title="Design, fabrication & analysis of a magnetostrictive test-bed running in a lower-earth orbit"
           category="Space Tech, Hobby Project, Robotics Test-bed"
+          url="https://nis.readthedocs.io/"
         >
           <p className="mb-4 block font-sans text-base font-light leading-relaxed antialiased">
             Engineered a payload for ISRO&apos;s Polar Satellite Launch Vehicle
@@ -65,11 +67,32 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
             transformation effect in outer space, advancing understanding of
             material properties under extreme conditions.
           </p>
-          <img
-            src="/nmimsedu.jpg"
-            alt="Hexa frame"
-            className={cx("w-full")}
-          />
+          <img src="/nmimsedu.jpg" alt="Hexa frame" className={cx("w-full")} />
+        </Proof>
+        <Proof title="Open-Source" category="Flutter, OpenCV, PX4, Robotics">
+          {/* <img src="/untouched.jpg" alt="Hexa frame" className={cx("w-64")} /> */}
+          <p className="mb-4 block font-sans text-base font-light leading-relaxed antialiased">
+            Creator and maintainer (BDFL) of several open-source projects.
+          </p>
+          <ul>
+            <li>
+              <a href="https://github.com/AdityaMulgundkar/DroneForce">
+                DroneForce
+              </a>{" "}
+              <br />
+              Ardupilot based framework to write your custom controller and
+              control a drone with ROS. You can read the usage tutorial on
+              <Link href={`/blog/droneforce-usage`}>
+                my blog.
+              </Link>
+            </li>
+            <li>
+              <a href="https://pub.dev/opencv">Flutter OpenCV</a>
+            </li>
+            <li>
+              <a href="https://pub.dev/wallpaper_manager">Wallpaper Manager</a>
+            </li>
+          </ul>
         </Proof>
         <Proof title="Mobile Applications" category="Flutter, Android, iOS">
           {/* <img src="/untouched.jpg" alt="Hexa frame" className={cx("w-64")} /> */}
