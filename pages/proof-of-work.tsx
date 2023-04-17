@@ -34,8 +34,11 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
               target="_blank"
               rel="noreferrer"
             >
-              brief description of my work
+              brief description of my work.
             </a>
+            <br/>
+            Note that this is not a complete list, as I have made this recently
+            and am still in the process of updating.
           </div>
         }
       >
@@ -75,35 +78,56 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
                   <br />
                   What happens when a motor works at a lower efficiency
                 </td>
-                <td><Check width=".9em" /></td>
-                <td><Check width=".9em" /></td>
+                <td>
+                  <Check width=".9em" />
+                </td>
+                <td>
+                  <Check width=".9em" />
+                </td>
               </tr>
               <tr>
                 <td>Motor Failures</td>
-                <td>Loss of Actuation (LoA)
+                <td>
+                  Loss of Actuation (LoA)
                   <br />
                   What happens when a motor stops working completely
                 </td>
-                <td><X width=".9em" /></td>
-                <td><Check width=".9em" /></td>
+                <td>
+                  <X width=".9em" />
+                </td>
+                <td>
+                  <Check width=".9em" />
+                </td>
               </tr>
               <tr>
                 <td>Motor Locking</td>
                 <td>What happens when a motor gets stuck at some RPM</td>
-                <td><X width=".9em" /></td>
-                <td><X width=".9em" /></td>
+                <td>
+                  <X width=".9em" />
+                </td>
+                <td>
+                  <X width=".9em" />
+                </td>
               </tr>
               <tr>
                 <td>Propeller Faults</td>
                 <td>What happens when a propeller chips off</td>
-                <td><Check width=".9em" /></td>
-                <td><Check width=".9em" /></td>
+                <td>
+                  <Check width=".9em" />
+                </td>
+                <td>
+                  <Check width=".9em" />
+                </td>
               </tr>
               <tr>
                 <td>Sensor Faults</td>
                 <td>What happens when a sensor stops working</td>
-                <td><Check width=".9em" /></td>
-                <td><Check width=".9em" /></td>
+                <td>
+                  <Check width=".9em" />
+                </td>
+                <td>
+                  <Check width=".9em" />
+                </td>
               </tr>
             </tbody>
           </table>
@@ -129,31 +153,50 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
           </p>
           <ul>
             <li>
-              <a href="https://github.com/AdityaMulgundkar/DroneForce" target="_blank" rel="noreferrer">
+              <a
+                href="https://github.com/AdityaMulgundkar/DroneForce"
+                target="_blank"
+                rel="noreferrer"
+              >
                 DroneForce
               </a>{" "}
               <br />
               Ardupilot based framework to write your custom controller and
               control a drone with ROS. You can read the usage tutorial on&nbsp;
-              <Link href={`/blog/droneforce-usage`}>
-                my blog.
-              </Link>
+              <Link href={`/blog/droneforce-usage`}>my blog.</Link>
             </li>
             <li>
-              <a href="https://pub.dev/opencv" target="_blank" rel="noreferrer">Flutter OpenCV</a>
+              <a href="https://pub.dev/opencv" target="_blank" rel="noreferrer">
+                Flutter OpenCV
+              </a>
             </li>
             <li>
-              <a href="https://github.com/AdityaMulgundkar/OpenCV-nuget" target="_blank" rel="noreferrer">
+              <a
+                href="https://github.com/AdityaMulgundkar/OpenCV-nuget"
+                target="_blank"
+                rel="noreferrer"
+              >
                 OpenCV Nuget
               </a>
               <br />
               My work on easing your workflow for&nbsp;
-              <a href="https://summerofcode.withgoogle.com/archive/2021/projects/6006857948200960" target="_blank" rel="noreferrer">
+              <a
+                href="https://summerofcode.withgoogle.com/archive/2021/projects/6006857948200960"
+                target="_blank"
+                rel="noreferrer"
+              >
                 OpenCV on Windows
-              </a> using the NuGet Package manager.
+              </a>{" "}
+              using the NuGet Package manager.
             </li>
             <li>
-              <a href="https://pub.dev/wallpaper_manager" target="_blank" rel="noreferrer">Wallpaper Manager</a>
+              <a
+                href="https://pub.dev/wallpaper_manager"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Wallpaper Manager
+              </a>
             </li>
           </ul>
         </Proof>
@@ -166,24 +209,40 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
           </p>
           <ul>
             <li>
-              <a href="https://play.google.com/store/apps/details?id=in.wedeasy.app" target="_blank" rel="noreferrer">
+              <a
+                href="https://play.google.com/store/apps/details?id=in.wedeasy.app"
+                target="_blank"
+                rel="noreferrer"
+              >
                 WedEasy
               </a>
             </li>
             <li>
-              <a href="https://play.google.com/store/apps/details?id=com.chaos_apps.valorant_plus_plus" target="_blank" rel="noreferrer">
+              <a
+                href="https://play.google.com/store/apps/details?id=com.chaos_apps.valorant_plus_plus"
+                target="_blank"
+                rel="noreferrer"
+              >
                 Valorant++
               </a>{" "}
               (Personal Project)
             </li>
             <li>
-              <a href="https://play.google.com/store/apps/details?id=in.scangrid.app" target="_blank" rel="noreferrer">
+              <a
+                href="https://play.google.com/store/apps/details?id=in.scangrid.app"
+                target="_blank"
+                rel="noreferrer"
+              >
                 ScanGrid
               </a>{" "}
               by VieTrove Solutions
             </li>
             <li>
-              <a href="https://play.google.com/store/apps/details?id=co.soaron.untouched_flutter" target="_blank" rel="noreferrer">
+              <a
+                href="https://play.google.com/store/apps/details?id=co.soaron.untouched_flutter"
+                target="_blank"
+                rel="noreferrer"
+              >
                 Untouched
               </a>{" "}
               by SoarOn
@@ -202,26 +261,58 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
           </p>
           <ul>
             <li>
-              <a href="https://wedeasy.in" target="_blank" rel="noreferrer">WedEasy</a>
+              <a href="https://wedeasy.in" target="_blank" rel="noreferrer">
+                WedEasy
+              </a>
             </li>
             <li>
-              <a href="https://solcodes.vercel.app" target="_blank" rel="noreferrer">SolCodes</a>
+              <a
+                href="https://solcodes.vercel.app"
+                target="_blank"
+                rel="noreferrer"
+              >
+                SolCodes
+              </a>
             </li>
             <li>
-              <a href="https://www.guildcap.com/" target="_blank" rel="noreferrer">Guild Capital</a>
+              <a
+                href="https://www.guildcap.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Guild Capital
+              </a>
             </li>
             <li>
-              <a href="https://www.atidiv.com/" target="_blank" rel="noreferrer">Atidiv</a>
+              <a
+                href="https://www.atidiv.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Atidiv
+              </a>
             </li>
             <li>
-              <a href="https://www.argylesp.com/" target="_blank" rel="noreferrer">Argyle Search Partners</a>
+              <a
+                href="https://www.argylesp.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Argyle Search Partners
+              </a>
             </li>
             <li>
-              <a href="https://www.blackwatch.io/" target="_blank" rel="noreferrer">BlackWatch Advisors</a>
+              <a
+                href="https://www.blackwatch.io/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                BlackWatch Advisors
+              </a>
             </li>
           </ul>
         </Proof>
-      </Page >
+      </Page>
     </>
   );
 };
