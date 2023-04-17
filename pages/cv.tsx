@@ -187,6 +187,19 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     email: event.currentTarget.email.value,
     role: event.currentTarget.role as any,
   };
+  // Require:
+  var postmark = require("postmark");
+
+  // Send an email:
+  var client = new postmark.ServerClient("c2cfd871-0511-4b96-825b-824a301e6d8e");
+
+  client.sendEmail({
+    From: "aditya@svoot.com",
+    To: "aditya@svoot.com",
+    Subject: "CV Request",
+    TextBody: "Hello from Postmark! <br>" + data.first + " <br> " + data.last + " <br> " + data.email + " <br> " + data.role.value,
+    MessageStream: "outbound",
+  });
   let a = document.createElement("a");
   a.href = "CV.pdf";
   a.download = "Aditya_M_" + ((Date.now() / 1000) | 0).toString() + "_CV.pdf";

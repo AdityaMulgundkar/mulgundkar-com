@@ -21,6 +21,7 @@
     "next-mdx-remote": "^4.2.1",
     "next-remote-watch": "^1.0.0",
     "next-themes": "^0.0.15",
+    "postmark": "^3.0.15",
     "prism-react-renderer": "^1.2.1",
     "react": "17.0.2",
     "react-children-utilities": "^2.6.3",
