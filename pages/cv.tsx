@@ -191,7 +191,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   var postmark = require("postmark");
 
   // Send an email:
-  var client = new postmark.ServerClient("c2cfd871-0511-4b96-825b-824a301e6d8e");
+  var client = new postmark.ServerClient(process.env.PM_API_KEY);
 
   client.sendEmail({
     From: "aditya@svoot.com",
@@ -203,7 +203,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   let a = document.createElement("a");
   a.href = "CV.pdf";
   a.download = "Aditya_M_" + ((Date.now() / 1000) | 0).toString() + "_CV.pdf";
-  a.click();
+  // a.click();
   //   alert(`${data.first} ${data.last} ${data.email} ${data.role.value}`);
 };
 
